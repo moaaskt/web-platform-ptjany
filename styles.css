@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  font-size: 23px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: linear-gradient(to right, #159c9c, #41b83b );
+  
+}
+.gride-container{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5,100px);
+}
+
+/* .gride-container{
+  cursor: pointer;
+font-size: 22px;
+border: 1px, solid;
+outline: none;
+background: #171818;
+color: rgb(247, 248, 248);
+
+} */
+
+.gride-container> button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: no;
+  outline: none;
+  background-color: black;
+  color: aliceblue;
+}
+
+.gride-container> .operation{
+  background: #41b83b;
+}
+.spawn-2{
+  grid-column: span 2;
+}
+.gride-container> .output{
+  grid-column: 1 / -1;
+  background: #233333;
+  display: flex;
+  flex-direction: column;
+ align-items: flex-end;
+ justify-content: space-around;
+ word-wrap: break-word;
+ word-break: break-all; 
+}
+
+.gride-container> .output> .current-operand{
+  color: white;
+  font-size: 2.4rem;
+}
