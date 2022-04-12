@@ -1,13 +1,13 @@
-const numBotao = document.querySelectorAll("[data-number]");
-const operationBotao = document.querySelectorAll("[data-operation]");
-const equalsBotao = document.querySelectorAll("[data-equals]");
-const delBotao = document.querySelectorAll("[data-delete]");
-const allClearBotao = document.querySelectorAll("[data-all-clear]");
+const numberButtons = document.querySelectorAll("[data-number]");
+const operationButton = document.querySelectorAll("[data-operation]");
+const equalsButton = document.querySelectorAll("[data-equals]");
+const delButton = document.querySelectorAll("[data-delete]");
+const allClearButton = document.querySelectorAll("[data-all-clear]");
 const previousOperandTextElement = document.querySelector("[data-previous-operand]");
 const currentOperandTextElement = document.querySelectorAll("[data-current-operand]");
 
 
-class Calculator {
+class calculator {
   constructor(previousOperandTextElement,currentOperandTextElement ) {
     this.previousOperandTextElement = previousOperandTextElement;
     this.currentOperandTextElement = currentOperandTextElement;
@@ -15,9 +15,22 @@ class Calculator {
 
   };
 
-  choseOpertaion(operation){
-    this.operation = operation;
+  calculate(){
+    let resultado
 
+    const _previousOperand = parseFloat(this.previousOperand)
+    const _currentOperand = parseFloat(this.currentOperand)
+  }
+
+  choseOperation(operation){
+    if(this.previousOperand == ''){
+      this.calculate()
+
+    }
+
+
+
+    this.operation = operation;
     this.previousOperand = `${this.currentOperand} ${this.operation}`;
     this.currentOperand= "";
   }
@@ -30,12 +43,12 @@ class Calculator {
 
   };
 
-  clean() {
+  clear() {
 
  
   this.currentOperand = '';
   this.previousOperand = '';
-  this.operationBotao = undefined;
+  this.operation = undefined;
 
 };
 updateDisplay(){
@@ -45,27 +58,27 @@ updateDisplay(){
 
 };
 
-const Calculator = new Calculator (
+const calculator = new calculator (
   previousOperandTextElement,
   currentOperandTextElement
   );
 
-  for(const numBotao of numBotaos){
-    numBotao.addEventListener('click',() => {
-      Calculator.appendNumber(numBotao.innerText);
-      Calculator.updateDisplay();
+  for(const numberButton of numberButtons){
+    numberButton.addEventListener("click",() => {
+      calculator.appendNumber(numberButton.innerText);
+      calculator.updateDisplay();
     });
   };
 
-for (const operationBotao of operationBotaos){
-  numBotao.addEventListener("click", () => {
-    Calculator.choseOpertaion(operationBotao.innerText);
+for (const operationButton of operationButtons){
+  numberButton.addEventListener("click", () => {
+    calculator.choseOperation(operationButton.innerText);
     this.updateDisplay();
   });
 }
 
-allClearBotao.addEventListener('click', () => {
-Calculator.clean();
-Calculator.updateDisplay()
+allClearButton.addEventListener("click", () => {
+  calculator.clean();
+  calculator.updateDisplay()
 });
 
