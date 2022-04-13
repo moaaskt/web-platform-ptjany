@@ -3,39 +3,65 @@
     <meta charset="UTF-8">
     <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
-
+    <script src="https://kit.fontawesome.com/5323cfefe9.js" crossorigin="anonymous"></script>
     <title>Calculadora</title>
   </head>
   <body>
-   
+    <div class="conteudo">
 
-    <div class="grid-container">
-      <div class="output">
-        <div data-previous-operand class="previous-operand"> 123 </div>
-        <div data-current-operand class="current-operand"> 123 </div>
-      </div>
-      <button data-all-clear class="span-two">AC</button>
-      <button  data-delete title="Deletar">DEL</button>
-      <button  title="Divisão" data-operator class="operator">÷</button>
-      <button title="Numero 1" data-number>1</button>
-      <button title="Numero 2" data-number>2</button>
-      <button title="Numero 3"  data-number>3</button>
-      <button title="Somar"  data-operator class="operator">+</button>
-      <button title="Numero 4"   data-number>4</button>
-      <button title="Numero 5" data-number>5</button>
-      <button title="Numero 6" data-number>6</button>
-      <button title="Subtração" data-operator class="operator">-</button>
-      <button title="Numero 7" data-number>7</button>
-      <button title="Numero 8" data-number>8</button>
-      <button title="Numero 9" data-number>9</button>
-      <button title="Multiplicação" data-operator class="operator">*</button>
-      <button title="." data-number class="span-two">.</button>
-      <button title="Numero 0" data-number>0</button>
+      <div class="calculator">
   
-      <button title="Resultado" data-equals class="operator">=</button>
-      
-
-    </div>
-
+          <p class="result" id="resultado"></p>
+  
+  
+          <h4>Feita por Moacir Neto.</h4>
+  
+          <table>
+                  <tr>
+                      <td> <button class="btn ac" style="width: 106px;" onclick="clean()" >AC</button> </td>
+                      <td> <button class="btn r" onclick="backspace()" ><i class="fa-solid fa-delete-left"></i></button> </td>
+                      <td> <button class="btn especial" onclick="insert('/')" ><i class="fa-solid fa-divide"></i></button></i> </td>
+  
+                  </tr>
+  
+  
+                  <tr>
+                      <td> <button class="btn " onclick="insert('7')" >7</button> </td>
+                      <td> <button class="btn " onclick="insert('8')"> 8</button> </td>
+                      <td> <button class="btn " onclick="insert('9')">9</button> </td>
+                      <td> <button class="btn especial" onclick="insert('*')" >X</button> </td>
+                  </tr>
+  
+                  
+                  <tr>
+                      <td> <button class="btn" onclick="insert('4')">4</button> </td>
+                      <td> <button class="btn" onclick="insert('5')"> 5</button> </td>
+                      <td> <button class="btn" onclick="insert('6')">6</button> </td>
+                      <td> <button class="btn especial" onclick="insert('-')" >-</button> </td>
+                  </tr>
+  
+  
+                  <tr>
+                      <td> <button class="btn " onclick="insert('1')">1</button> </td>
+                      <td> <button class="btn " onclick="insert('2')"> 2</button> </td>
+                      <td> <button class="btn " onclick="insert('3')">3</button> </td>
+                      <td> <button class="btn especial" onclick="insert('+')">+</button> </td>
+                  </tr>
+  
+                  <tr>
+                      <td> <button class="btn " onclick="insert('0')" >0</button> </td>
+                      <td> <button class="btn " onclick="insert('.')" > .</button> </td>
+                      <td> <button class="btn igual" style="width: 106px;" onclick="calcular()" >=</button> </td>
+                  </tr>
+  
+  
+  
+          </table>
+  
+      </div>
+  
+  
+  </div>
+  
   </body>
 </html>

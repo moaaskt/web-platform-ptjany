@@ -1,57 +1,80 @@
-* {
-  box-sizing: border-box;
-  font-size: 23px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: bold;
+*{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 body{
-  background: linear-gradient(to right, #bfd3d3, #0b6b06a8 );
+  background-color: rgba(95, 158, 160, 0.541);
+}
+
+.calculator{
+  width: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 10px;
+  background-color: rgb(29, 28, 28);
+}
+
+table td{
+  display: inline-block;
+}
+.btn{
+  margin: 3px;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(31, 32, 36);
+  color: rgb(239, 239, 245);
+  font-size: 16px;
+  transition: all 50ms ease-in-out;
+}
+
+
+.btn:hover{
+  background-color: #03adadbd;
+
+}
+
+.ac{
+  background-color:#03adadfa;
+}
+.ac:hover{
+  background-color:#03adadbd;
+}
+.especial{
+  background-color:#03adadfa;
+}
+.especial:hover{
+  background-color: #03adadbd;
+}
+.igual{
+  background-color:#03adadfa;
+}
+.igual:hover{
+  background-color:#03adadbd;
+}
+
+.result{
+  height: 100px;
+  color: rgb(255, 255, 255);
+  text-align: right;
+  font-size: 35px;
+  word-wrap: break-word;
+  border-bottom: 1px solid #03adadfa;;
   
 }
-.grid-container{
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  min-height: 100vh;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(5,100px);
-}
-
-
-.grid-container> button {
-  cursor: pointer;
-  font-size: 2rem;
-  border: none;
-  outline: none;
-  background-color: black;
+h4{
   color: aliceblue;
+  font-size: 12px;
 }
 
-.grid-container> .operator{
-  background: #41b83b;
-}
-.span-two{
-  grid-column: span 2;
-}
-.grid-container> .output{
-  grid-column: 1 / -1;
-  background: #233333;
-  display: flex;
-  flex-direction: column;
- align-items: flex-end;
- justify-content: space-around;
- padding: 9px;
- word-wrap: break-word;
- word-break: break-all; 
-}
-.grid-container>.output>.previous-operand{
-  color: #111313;
-  font-size: 1.5rem;
-}
-
-.grid-container> .output> .current-operand{
-  color: white;
-  font-size: 2.4rem;
+.btn.r{
+  color: #03adadfa;
+  background-color: rgba(21, 22, 22, 0.397);
 }
