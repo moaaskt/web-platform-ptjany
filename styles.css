@@ -66,7 +66,11 @@ table td{
   text-align: right;
   font-size: 35px;
   word-wrap: break-word;
-  border-bottom: 1px solid #03adadfa;;
+  border-bottom: 1px solid #03adadfa;
+  max-width: 12ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: unset;
   
 }
 h4{
